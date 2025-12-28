@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>非遗传承，皮影辨妖</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    
+    /* 整体容器 - 用于放置图片和文字 */
+    .main-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap; /* 屏幕较小时自动换行 */
+      gap: 30px;
+      align-items: center; /* 垂直居中对齐 */
+    }
+    
+    /* 第一张图片作为背景容器 */
+    .background-container {
+      position: relative;
+      max-width: 1000px; /* 背景图最大宽度 */
+      flex: 1; /* 占满剩余空间 */
+      min-width: 600px; /* 最小宽度，避免过窄 */
+    }
+    
+    /* 背景图片 */
+    .bg-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    
+    /* 第二张图片（中心图片）- 已放大 */
+    .center-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%); /* 垂直居中偏上，预留第三张图位置 */
+      width: 80%; /* 中心图宽度调整为背景图的80% */
+      max-width: 1200px; /* 最大宽度增大到700px */
+      border: 2px solid #fff;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    /* 第三张图片（底部图片） */
+    .bottom-image {
+      position: absolute;
+      bottom: 10%; /* 距离背景图底部10% */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%; /* 底部图宽度为背景图的70% */
+      max-width: 600px;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    /* 右侧文字区域 */
+    .text-content {
+      flex: 0 0 300px; /* 固定宽度 */
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .text-content h2 {
+      color: #8B4513;
+      font-size: 24px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    
+    .text-content p {
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    
+    .text-content .highlight {
+      color: #8B4513;
+      font-weight: bold;
+    }
+    
+    /* 响应式调整 - 屏幕较小时文字区域在图片下方 */
+    @media (max-width: 1000px) {
+      .text-content {
+        flex: 1;
+        min-width: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <!-- 背景图片容器 -->
+    <img src="img/background.jpg" alt="背景图片" class="bg-image">
+        
+        <!-- 第二张图片：中心图片（在背景图中间） -->
+        <img src="img/center.jpg" alt="中心图片" class="center-image">
+        
+        <!-- 第三张图片：底部图片（在中心图片下方） -->
+        <img src="img/bottom.jpg" alt="底部图片" class="bottom-image">
+    </div>
+    
+    <!-- 右侧文字区域 -->
+    <div class="text-content">
+      <h2>图片说明</h2>
+      <p>画面里的白发老者是一位皮影艺人，他正打开 “皮影盒”，展示盒中的两个皮影角色 </p>
+      <p><span class="highlight">一</span>：背景的木架和画笔暗示这是他的创作或表演工坊。</p>
+      <p><span class="highlight">二</span>：整体故事的内核是非遗传承的浪漫化表达</p>
+      <p><span class="highlight">三</span>：老艺人以精湛的皮影技艺，将传统文化中的信仰、想象与艺术创作融为一体，让古老的皮影艺术在 “辨妖镇邪” 的故事里焕发生机，既体现了对非遗技艺的珍视，又为它增添了一层神秘动人的民间传说色彩。
+</p>
+      
+    </div>
+  </div>
+</body>
+</html>
